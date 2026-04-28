@@ -111,13 +111,13 @@ For Alpine, follow [these instructions](https://wiki.alpinelinux.org/wiki/Docker
 Then, start and enable docker
 
 ```bash tab="Systemd"
-systemctl start mariadb
-systemctl enable mariadb
+sudo systemctl start docker
+sudo systemctl enable docker
 ```
 
 ```bash tab="OpenRC"
-rc-service docker start
-rc-update add docker default
+doas rc-service docker start
+doas rc-update add docker default
 ```
 
 ## Backend configuration
