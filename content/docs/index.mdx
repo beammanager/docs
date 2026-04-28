@@ -1,14 +1,29 @@
 ---
-title: Hello World
-description: Your favourite docs framework.
+title: Getting started
+description: Get set up with beamManager.
 icon: Rocket
 ---
 
-Hey there! Fumadocs is a docs framework that works on Waku!
+<Callout title="Windows users" type="warn">
+  BeamManager is currently not officially supported on windows, you can try it,
+  but we will not provide support. Here be dragons!
+</Callout>
 
-## Heading
+## Database setup
 
-Hello World!
+### Database installation
+
+```bash tab="Ubuntu/Debian"
+sudo apt install mariadb-server mariadb-client
+```
+
+```bash tab="Fedora"
+sudo dnf install mariadb-server mariadb
+```
+
+```bash tab="openSUSE"
+sudo zypper install mariadb mariadb-client
+```
 
 <Cards>
   <Card title="Learn more about Waku" href="https://waku.gg" />
@@ -18,7 +33,7 @@ Hello World!
 ### CodeBlock
 
 ```ts
-console.log('Hello World');
+console.log("Hello World");
 ```
 
 #### Table
