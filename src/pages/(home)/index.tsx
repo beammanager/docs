@@ -8,7 +8,7 @@ export default function Home() {
       <title>BeamManager</title>
       <h1 className="font-medium text-2xl mb-4">
         The panel{" "}
-        <span className="relative text-orange-300">
+        <span className="relative text-orange-700 dark:text-orange-300">
           purpose built
           <svg
             className="absolute -bottom-1 left-0 w-full h-2 overflow-visible"
