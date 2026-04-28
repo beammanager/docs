@@ -11,16 +11,59 @@ icon: Rocket
 
 ## Database setup
 
-### Database installation
+<Callout type="info">
+  All commands in this section require root permissions, so run them using
+  `sudo` or `doas` if you are not the root user.
+</Callout>
+
+### MariaDB installation
+
+Don't use sudo or doas if you are the root user
 
 ```bash tab="Ubuntu/Debian"
-sudo apt install mariadb-server mariadb-client
+apt install mariadb-server mariadb-client
 ```
 
 ```bash tab="Fedora"
-sudo dnf install mariadb-server mariadb
+dnf install mariadb-server mariadb
 ```
 
 ```bash tab="openSUSE"
-sudo zypper install mariadb mariadb-client
+zypper install mariadb mariadb-client
 ```
+
+```bash tab="Alpine"
+# You should have doas installed
+apk add mariadb mariadb-client
+```
+
+### Start and enable MariaDB
+
+```bash tab="Systemd"
+systemctl start mariadb
+systemctl enable mariadb
+```
+
+```bash tab="OpenRC"
+rc-service mariadb start
+rc-update add mariadb default
+```
+
+### Database Installation
+
+<Callout type="warn">
+  If you already have MariaDB setup, you should probably skip this step.
+</Callout>
+
+```bash
+mariadb-install-db
+```
+
+If you want the database to be created in a specific lcoation, specify it using the `--datadir=<path>` flag.
+
+```bash
+mariadb-secure-installation
+```
+
+It will first prompt you for the password of the root database user, just press enter as that is not configured.  
+Then, it will ask you if you want to set a password for the root account. Choose no. This is still secure because the account is linked to the root user, if they are not acting as the root user on your system, they cannot access the MariaDB root account.
