@@ -21,10 +21,11 @@ icon: Rocket
 Don't use sudo or doas if you are the root user
 
 ```bash tab="Ubuntu/Debian"
+apt update
 apt install mariadb-server mariadb-client
 ```
 
-```bash tab="Fedora"
+```bash tab="Fedora/RHEL/Alma"
 dnf install mariadb-server mariadb
 ```
 
@@ -33,7 +34,6 @@ zypper install mariadb mariadb-client
 ```
 
 ```bash tab="Alpine"
-# You should have doas installed
 apk add mariadb mariadb-client
 ```
 
@@ -55,15 +55,39 @@ rc-update add mariadb default
   If you already have MariaDB setup, you should probably skip this step.
 </Callout>
 
+Run this command if you want to install the database somewhere other than the default location
+
 ```bash
-mariadb-install-db
+mariadb-install-db --datadir=<path>
 ```
 
-If you want the database to be created in a specific lcoation, specify it using the `--datadir=<path>` flag.
+Then, secure the database installation
 
 ```bash
 mariadb-secure-installation
 ```
 
-It will first prompt you for the password of the root database user, just press enter as that is not configured.  
+It will first prompt you for the password of the root database user, just press enter as that is not set.  
 Then, it will ask you if you want to set a password for the root account. Choose no. This is still secure because the account is linked to the root user, if they are not acting as the root user on your system, they cannot access the MariaDB root account.
+
+### Database creation
+
+Enter the mariadb shell
+
+```bash
+mariadb
+```
+
+Create the database
+
+```sql
+CREATE DATABASE BeamManager;
+```
+
+### Database user creation
+
+<Callout type="warn">**Remember the password!**</Callout>
+
+```sql
+CREATE USER beammanagerapi IDENTIFIED BY 'passwordHere';
+```
