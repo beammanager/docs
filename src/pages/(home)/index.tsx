@@ -1,8 +1,9 @@
-import { Link } from 'waku';
+import { Link } from "waku";
 
 export default function Home() {
   return (
     <div className="flex-1 flex flex-col items-center justify-center text-center">
+      <title>BeamManager</title>
       <h1 className="font-medium text-xl mb-4">Fumadocs on Waku.</h1>
       <Link
         to="/docs"
@@ -16,6 +17,6 @@ export default function Home() {
 
 export async function getConfig() {
   return {
-    render: 'static',
+    render: "static",
   };
 }

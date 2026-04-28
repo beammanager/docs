@@ -4,6 +4,8 @@ description: Get set up with beamManager.
 icon: Rocket
 ---
 
+<title>Getting Started</title>
+
 <Callout title="Windows users" type="warn">
   BeamManager is currently not officially supported on windows, you can try it,
   but we will not provide support. Here be dragons!
@@ -89,5 +91,51 @@ CREATE DATABASE BeamManager;
 <Callout type="warn">**Remember the password!**</Callout>
 
 ```sql
-CREATE USER beammanagerapi IDENTIFIED BY 'passwordHere';
+-- [!code word:password here]
+CREATE USER beammanagerapi IDENTIFIED BY 'password here';
+```
+
+Now, exit the mariadb shell
+
+```sql
+EXIT;
+```
+
+## Docker installation
+
+Follow the [official guide](https://docs.docker.com/engine/install/)  
+For AlmaLinux, follow the RHEL instructions  
+For openSUSE, follow [these instructions](https://en.opensuse.org/Docker)  
+For Alpine, follow [these instructions](https://wiki.alpinelinux.org/wiki/Docker)
+
+Then, start and enable docker
+
+```bash tab="Systemd"
+systemctl start mariadb
+systemctl enable mariadb
+```
+
+```bash tab="OpenRC"
+rc-service docker start
+rc-update add docker default
+```
+
+## Backend configuration
+
+Create the configuration file
+
+```bash
+mkdir $XDG_CONFIG_HOME/beammanager
+touch api.toml
+```
+
+Then add this to the configuration file:
+
+<Callout type="info">
+  Now you have to use the password you *should* have remembered from earlier
+</Callout>
+
+```toml
+# [!code word:password from earlier]
+dbPassword = "password from earlier"
 ```
