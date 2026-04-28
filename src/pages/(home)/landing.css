@@ -7,11 +7,14 @@
 }
 
 @keyframes draw {
-  to {
+  0% {
+    stroke-dashoffset: 110;
+  }
+  100% {
     stroke-dashoffset: 0;
   }
 }
 
 .animate-draw {
-  animation: draw 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation: draw 1.6s cubic-bezier(0.78, 0, 0.22, 1) forwards;
 }

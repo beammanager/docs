@@ -14,6 +14,7 @@ export default function Home() {
             className="absolute -bottom-1 left-0 w-full h-2 overflow-visible"
             viewBox="0 0 100 10"
             preserveAspectRatio="none"
+            role="none"
           >
             <path
               d="M0 5 C 20 0, 30 10, 50 5 S 80 0, 100 5"
@@ -23,8 +24,8 @@ export default function Home() {
               strokeLinecap="round"
               className="animate-draw"
               style={{
-                strokeDasharray: 150,
-                strokeDashoffset: 150,
+                strokeDasharray: 110,
+                strokeDashoffset: 110,
               }}
             />
           </svg>
@@ -32,11 +33,11 @@ export default function Home() {
         for beamMP
       </h1>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-2/3 h-2/3 min-h-128 blur-3xl -z-10 rounded-4xl">
+        {/* Generated with blobmaker */}
         <svg
-          role="img"
+          role="none"
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
-          aria-label="blurred blob background"
           width={3000}
           preserveAspectRatio="none"
           height={1200}
