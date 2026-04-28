@@ -61,7 +61,7 @@ export default function Home() {
       </div>
       <img
         src="/images/screenshot.png"
-        className="w-384 rounded-sm"
+        className="w-384 rounded-md"
         alt="BeamManager screenshot"
       />
       <Link
