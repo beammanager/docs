@@ -4,7 +4,7 @@ import { Rocket } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex-1 flex flex-col items-center justify-center text-center h-full gap-4">
+    <div className="flex-1 flex flex-col items-center justify-center text-center h-full p-4">
       <title>BeamManager</title>
       <h1 className="font-medium text-2xl mb-4">
         The panel{" "}
@@ -32,20 +32,18 @@ export default function Home() {
         </span>{" "}
         for beamMP
       </h1>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-2/3 h-2/3 min-h-128 blur-3xl -z-10 rounded-4xl">
         {/* Generated with blobmaker */}
         <svg
           role="none"
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
-          width={3000}
           preserveAspectRatio="none"
-          height={1200}
+          className="w-5/6 h-full blur-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-1 overflow-hidden"
         >
           <defs>
             <linearGradient id="0" x1="0.05" y1="0.73" x2="0.95" y2="0.27">
               <stop offset="0%" stopColor="#ff0044" />
-              <stop offset="20.33%" stopColor="#ff3c3" />
+              <stop offset="20.33%" stopColor="#ff3c33" />
               <stop offset="61%" stopColor="#ff6a00" />
               <stop offset="74%" stopColor="#fc8800" />
               <stop offset="100%" stopColor="#ffb700" />
@@ -58,15 +56,14 @@ export default function Home() {
             transform="translate(100 100)"
           />
         </svg>
-      </div>
       <img
         src="/images/screenshot.png"
-        className="w-384 rounded-md"
+        className="w-2/3 rounded-md"
         alt="BeamManager screenshot"
       />
       <Link
         to="/docs"
-        className="px-3 py-2 rounded-lg bg-fd-primary text-fd-primary-foreground font-medium text-sm mx-auto flex gap-1 items-center"
+        className="px-3 py-2 rounded-lg bg-fd-primary text-fd-primary-foreground font-medium text-sm mx-auto flex gap-1 items-center mt-4"
       >
         <Rocket size="1rem" />
         Get Started
