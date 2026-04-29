@@ -32,33 +32,33 @@ export default function Home() {
         </span>{" "}
         for beamMP
       </h1>
-        {/* Generated with blobmaker */}
-        <svg
-          role="none"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          className="w-5/6 h-full blur-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-1 overflow-hidden"
-        >
-          <defs>
-            <linearGradient id="0" x1="0.05" y1="0.73" x2="0.95" y2="0.27">
-              <stop offset="0%" stopColor="#ff0044" />
-              <stop offset="20.33%" stopColor="#ff3c33" />
-              <stop offset="61%" stopColor="#ff6a00" />
-              <stop offset="74%" stopColor="#fc8800" />
-              <stop offset="100%" stopColor="#ffb700" />
-            </linearGradient>
-          </defs>
-          <path
-            fill="url(#0)"
-            className="gradient"
-            d="M45,-69C55.7,-63.2,59.7,-46.2,67.4,-30.5C75,-14.7,86.3,-0.4,87.9,15.1C89.4,30.5,81.3,46.9,69.3,59.1C57.3,71.3,41.4,79.2,25.6,81C9.9,82.7,-5.9,78.2,-22.1,74C-38.4,69.9,-55.2,66.1,-66.8,56C-78.4,46,-84.9,29.5,-87.1,12.6C-89.4,-4.3,-87.4,-21.6,-80.4,-36.6C-73.4,-51.6,-61.4,-64.1,-47.1,-68.3C-32.9,-72.4,-16.4,-68.1,0.4,-68.7C17.2,-69.3,34.4,-74.8,45,-69Z"
-            transform="translate(100 100)"
-          />
-        </svg>
+      {/* Generated with blobmaker */}
+      <svg
+        role="none"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        className="w-5/6 max-h-25/30 blur-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-1"
+      >
+        <defs>
+          <linearGradient id="0" x1="0.05" y1="0.73" x2="0.95" y2="0.27">
+            <stop offset="0%" stopColor="#ff0044" />
+            <stop offset="20.33%" stopColor="#ff3c33" />
+            <stop offset="61%" stopColor="#ff6a00" />
+            <stop offset="74%" stopColor="#fc8800" />
+            <stop offset="100%" stopColor="#ffb700" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#0)"
+          className="gradient"
+          d="M45,-69C55.7,-63.2,59.7,-46.2,67.4,-30.5C75,-14.7,86.3,-0.4,87.9,15.1C89.4,30.5,81.3,46.9,69.3,59.1C57.3,71.3,41.4,79.2,25.6,81C9.9,82.7,-5.9,78.2,-22.1,74C-38.4,69.9,-55.2,66.1,-66.8,56C-78.4,46,-84.9,29.5,-87.1,12.6C-89.4,-4.3,-87.4,-21.6,-80.4,-36.6C-73.4,-51.6,-61.4,-64.1,-47.1,-68.3C-32.9,-72.4,-16.4,-68.1,0.4,-68.7C17.2,-69.3,34.4,-74.8,45,-69Z"
+          transform="translate(100 100)"
+        />
+      </svg>
       <img
         src="/images/screenshot.png"
-        className="w-2/3 rounded-md"
+        className="w-2/3 rounded-md hidden md:block"
         alt="BeamManager screenshot"
       />
       <Link

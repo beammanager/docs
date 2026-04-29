@@ -1,6 +1,6 @@
-import { getPageImage, getPageMarkdownUrl, source } from '@/lib/source';
-import { PageProps } from 'waku/router';
-import { createRelativeLink } from 'fumadocs-ui/mdx';
+import { getPageImage, getPageMarkdownUrl, source } from "@/lib/source";
+import { PageProps } from "waku/router";
+import { createRelativeLink } from "fumadocs-ui/mdx";
 import {
   DocsBody,
   DocsDescription,
@@ -8,12 +8,12 @@ import {
   DocsTitle,
   MarkdownCopyButton,
   ViewOptionsPopover,
-} from 'fumadocs-ui/layouts/docs/page';
-import { unstable_notFound } from 'waku/router/server';
-import { gitConfig } from '@/lib/shared';
-import { getMDXComponents } from '@/components/mdx';
+} from "fumadocs-ui/layouts/docs/page";
+import { unstable_notFound } from "waku/router/server";
+import { gitConfig } from "@/lib/shared";
+import { getMDXComponents } from "@/components/mdx";
 
-export default function Page({ slugs }: PageProps<'/docs/[...slugs]'>) {
+export default function Page({ slugs }: PageProps<"/docs/[...slugs]">) {
   const page = source.getPage(slugs);
   if (!page) unstable_notFound();
 
@@ -23,7 +23,9 @@ export default function Page({ slugs }: PageProps<'/docs/[...slugs]'>) {
     <DocsPage toc={page.data.toc}>
       <meta property="og:image" content={getPageImage(slugs).url} />
       <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
+      <DocsDescription className="mb-0">
+        {page.data.description}
+      </DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pt-2 pb-6">
         <MarkdownCopyButton markdownUrl={markdownUrl} />
         <ViewOptionsPopover
@@ -49,7 +51,7 @@ export async function getConfig() {
     .map((item) => (item.lang ? [item.lang, ...item.slug] : item.slug));
 
   return {
-    render: 'static' as const,
+    render: "static" as const,
     staticPaths: pages,
   } as const;
 }
