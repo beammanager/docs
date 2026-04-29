@@ -1,6 +1,13 @@
 import { Link } from "waku";
 import "./landing.css";
-import { Rocket } from "lucide-react";
+import { Card } from "fumadocs-ui/components/card";
+import {
+  BanknoteArrowDown,
+  Container,
+  Gauge,
+  Puzzle,
+  Rocket,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -68,6 +75,31 @@ export default function Home() {
         <Rocket size="1rem" />
         Get Started
       </Link>
+      <div className="flex mt-4 max-w-2/3 min-w-fit justify-center gap-4 flex-wrap">
+        <Card
+          title="Built in mod management"
+          icon={<Puzzle />}
+          className="text-left flex-1 max-w-128 min-w-64"
+        >
+          Want to add a mod from the beamNG repo?
+          <br /> Just hit download and restart your server!
+        </Card>
+        <Card
+          title="It's free"
+          className="text-left flex-1 max-w-128 min-w-64"
+          icon={<BanknoteArrowDown />}
+        >
+          It's completely free, and we will never charge money to use it
+        </Card>
+        <Card
+          title="Powered by Docker"
+          icon={<Container />}
+          className="text-left flex-1 max-w-128 min-w-64"
+        >
+          Each server runs in it's own separate container, so it can't access
+          anything outside of it's own files.
+        </Card>
+      </div>
     </div>
   );
 }

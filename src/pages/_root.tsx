@@ -9,7 +9,9 @@ export default async function RootElement({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head></head>
+      <head>
+        <meta name="description" content="The server panel built for beamMP" />
+      </head>
       <body data-version="1.0" className="flex flex-col min-h-screen">
         <Provider>{children}</Provider>
       </body>
