@@ -44,11 +44,11 @@ export default function Home() {
         >
           <defs>
             <linearGradient id="0" x1="0.05" y1="0.73" x2="0.95" y2="0.27">
-              <stop offset="0%" stop-color="#ff0044" />
-              <stop offset="20.33%" stop-color="#ff3c33" />
-              <stop offset="61%" stop-color="#ff6a00" />
-              <stop offset="74%" stop-color="#fc8800" />
-              <stop offset="100%" stop-color="#ffb700" />
+              <stop offset="0%" stopColor="#ff0044" />
+              <stop offset="20.33%" stopColor="#ff3c3" />
+              <stop offset="61%" stopColor="#ff6a00" />
+              <stop offset="74%" stopColor="#fc8800" />
+              <stop offset="100%" stopColor="#ffb700" />
             </linearGradient>
           </defs>
           <path
