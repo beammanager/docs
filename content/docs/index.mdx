@@ -91,6 +91,7 @@ CREATE DATABASE BeamManager;
 ```sql
 -- [!code word:password here]
 CREATE USER beammanagerapi IDENTIFIED BY 'password here';
+GRANT ALL PRIVILEGES ON BeamManager.* TO beammanagerapi;
 ```
 
 Now, exit the mariadb shell
